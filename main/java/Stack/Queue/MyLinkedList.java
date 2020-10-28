@@ -25,8 +25,38 @@ public class MyLinkedList {
 	            this.head.setNext(tempNode);
 	        }
 	    }
-	public void printMyNodes() {
-	
-		
-	}
+	   //Append
+	   public void append(INode newNode) {
+	        if(this.head == null && this.tail == null) {
+	            this.head = newNode;
+	            this.tail = newNode;
+	        }
+	        else {
+	            this.tail.setNext(newNode);
+	            this.tail = newNode;
+	        }
+	    }
+	   //Insert
+	    public void insert(INode myNode , INode newNode) {
+	        INode tempNode = myNode.getNext();  
+	        myNode.setNext(newNode);            
+	        newNode.setNext(tempNode);          
+	    }
+	    //Pop
+	    public INode pop() {
+	        INode tempNode = this.head;         
+	        this.head = head.getNext();         
+	        return tempNode;
+	    }
+	    public INode peek() {
+	        return this.head;
+	    }
+	    //Empty
+	    public boolean isEmpty() {
+	        if (this.head == null)
+	            return true;
+	        else
+	            return false;
+
+	    }
 }

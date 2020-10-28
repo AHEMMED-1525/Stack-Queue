@@ -2,20 +2,28 @@ package Stack.Queue;
 
 public class MyStack <K>{
 	private final MyLinkedList myLinkedList;
+	
 	public MyStack() {
 		this.myLinkedList = new MyLinkedList();
 	}
+	// Push the stack
 	public void push(INode myNode) {
 		myLinkedList.add(myNode);
 		
 	}
-	public void printStack() {
-		myLinkedList.printMyNodes();
-		
-	}
+
+	//Peak method
 	public INode peak() {
 		return myLinkedList.head;
 		
+	}
+	//Pop Method
+	public INode pop() {
+		return myLinkedList.pop();
+	}
+	
+	public boolean isEmpty() {
+		return myLinkedList.isEmpty();
 	}
 
 }

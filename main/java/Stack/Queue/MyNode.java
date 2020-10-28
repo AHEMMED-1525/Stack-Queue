@@ -17,6 +17,7 @@ public class MyNode<K> implements INode<K>{
 		this.key = key;
 	}
 
+	// Getters and setters
 	public INode<K> getNext() {
 		return next;
 	}
